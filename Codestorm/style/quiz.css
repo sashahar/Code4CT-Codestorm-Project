@@ -5,7 +5,7 @@
 .container{
   background-color:  #efefef;
   width: 75%;
-  height: 75%;
+  min-height: 75%;
   margin: auto;
   margin-top: 50px;
   text-align: center;
@@ -16,13 +16,18 @@
   margin: auto;
   padding: 20px;
   width: 50%;
-  height: 60%;
+  /* height: 60%; */
   background-color: #f18973;
 }
 
 #quizResult {
   color:#ffcc00;
   font-size: 24px;
+}
+
+#startButton, #submitButton{
+  margin-top: 15px;
+  padding: 10px;
 }
 
 .title{
@@ -37,7 +42,7 @@
 }
 
 button {
-  margin: 5px;
+  margin: 7px;
   padding: 5px;
   min-width: 30px;
   background-color: #484f4f;
@@ -46,4 +51,9 @@ button {
   border-radius: 8px;
   width: 50%;
   font: 12px "Verdana";
+}
+
+.answers{
+  align-items: left;
+  display: flex;
 }
