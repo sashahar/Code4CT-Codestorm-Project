@@ -56,5 +56,4 @@ button {
 /* TODO: How to align answer options on the left? */
 .answers{
   align-items: left;
-  display: flex;
 }
