@@ -1,5 +1,4 @@
 var currentQ = 0;
-var productivityPoints = 0;
 
 var questions = [{question:"How cluttered is your desk?", answers:["A mess", "Cluttered", "Organized", "Empty"]},
  {question:"On average, how much sleep do you get per night?", answers:["Less than 6 hours", "6-7 hours", "7-8 hours","More than 8 hours"]},
@@ -107,14 +106,21 @@ function clearDiv(answersDiv){
 
   for(var i = 0; i < numChildren; i++){
     answersDiv.removeChild(answersDiv.childNodes[0]);
-    console.log("remove");
   }
 }
 
 function displayResult(){
-  var questionDiv = document.getElementById("question");
-  var answersDiv = document.getElementById("answers");
-  questionDiv.innerHTML = "Your Result is:";
+  var quizDiv = document.getElementById("quizbox");
+  //TODO: here, calculate final score based on selected radio buttons
+
+  var answerContainers = quizDiv.querySelectorAll('.answers'); //get all the elements with the class name "answers"
+  console.log(answerContainers.length);
+  var productivityPoints = 0;
+  for(var i = 0; i < answerContainers.length; i++){
+    var userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+    productivityPoints += userAnswer + 1;
+    console.log(productivityPoints);
+  }
   var result;
   if (productivityPoints <= 4){
     result = "Least Productive";
@@ -126,9 +132,20 @@ function displayResult(){
     result = "SUPER Productive";
   }
 
+
+  //NEWPART
+  clearDiv(quizDiv);
+
+  //change name here
+  var questionDiv = document.createElement("h3");
+  questionDiv.id = "question";
+  questionDiv.innerHTML = "Your Result is:";
+  quizDiv.appendChild(questionDiv)
+
   var resultNode = document.createTextNode(result);
   var node = document.createElement("p");
   node.appendChild(resultNode);
   node.id = "quizResult";
-  answersDiv.appendChild(node);
+  quizDiv.appendChild(node);
+  //resultDiv.id = "answers"; //needs a different ID
 }

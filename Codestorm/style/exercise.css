@@ -1,0 +1,35 @@
+.container{
+  background-color:  #efefef;
+  width: 75%;
+  min-height: 75%;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-areas: 'myArea myArea';
+  grid-gap: 25px;
+  padding: 10px;
+  justify-content: center;
+  min-width: 90%;
+  margin-top: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.title{
+  color: #484f4f;
+  padding-top: 15px;
+  font-family: "Verdana";
+  text-align: center;
+}

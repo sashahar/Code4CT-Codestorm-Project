@@ -53,6 +53,7 @@ button {
   font: 12px "Verdana";
 }
 
+/* TODO: How to align answer options on the left? */
 .answers{
   align-items: left;
   display: flex;
