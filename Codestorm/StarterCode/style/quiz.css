@@ -1,0 +1,64 @@
+.wrapper{
+  background-color: : #eaece5;
+}
+
+h3{
+  font-family: "Verdana";
+}
+
+.container{
+  background-color:  #efefef;
+  width: 75%;
+  min-height: 75%;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+#quizbox {
+  margin: auto;
+  padding: 20px;
+  width: 50%;
+  /* height: 60%; */
+  background-color: #f18973;
+  border-radius: 8px;
+}
+
+#quizResult {
+  color:#ffcc00;
+  font-size: 24px;
+}
+
+#startButton, #submitButton{
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.title{
+  color: #484f4f;
+  padding-top: 15px;
+  font-family: "Verdana";
+  text-align: center;
+}
+
+.quizText{
+  font-family: "Verdana";
+}
+
+button {
+  margin: 7px;
+  padding: 5px;
+  min-width: 30px;
+  background-color: #484f4f;
+  border-color: #484f4f;
+  color: white;
+  border-radius: 8px;
+  width: 50%;
+  font: 12px "Verdana";
+}
+
+/* TODO: How to align answer options on the left? */
+.answers{
+  align-items: left;
+}
