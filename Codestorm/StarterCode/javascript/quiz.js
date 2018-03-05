@@ -15,6 +15,7 @@ function intro(){
   var headingDiv = document.getElementById("heading");
   var bodyDiv = document.getElementById("bodyText");
   //Activity 1 - Change the contents of the headingDiv to say "How productive are you?"
+  //You should see this text appear on your webpage.
 
   //Activity 2 - Add a new child node to the bodyDiv to make a
   //description of the quiz appear on the screen.
@@ -33,14 +34,13 @@ function intro(){
 
   //Activity 4 - add your new button as a child of the bodyDiv.
   //Hint: If you want add your button on a new line, you can add a new
-  //"br" element to the DOM
+  //"br" element to the DOM before you add the button
+  //If you've completed part 1 correctly, you should see your heading ("How productive are you?"),
+  //The description of your quiz, and your "Get Started" button.
+  //When you click the "Get Started" button, you should see a new, blank page appear.
 
 }
 
-//Activity 5 - call the intro function you completed above
-//If you've completed part 1 correctly, you should see your heading ("How productive are you?"),
-//The description of your quiz, and your "Get Started" button.
-//When you click the "Get Started" button, you should see a new, blank page appear.
 intro();
 
 /************************** PART 2 **************************/
@@ -60,12 +60,12 @@ function buildQuiz(){
     // called "question" and "answers"
 
 
-    //Activity 3 - set the element's "className" attribute to be equal to "question"
+    //Activity 3 - set the element's "className" attribute to be "question"
     //We need to set the className property to be able to style the quesiton text using CSS.
 
-    //Activity 4 - Now that you've created the quiz question item, add this new element as a child of the quizDiv.
+    //Activity 4 - Now that you've filled in the h3 element, add this new element as a child of the quizDiv.
     //If you've done everything correctly up until this point, you should see all 4 questions
-    // appear on the webpage when you click the "Get Started button"
+    // appear on the webpage when you click the "Get Started" button
 
     //Next, we will add the four answer options as radio buttons
     //We've taken care of writing this part of the code for you.
@@ -93,13 +93,14 @@ function buildQuiz(){
   //Activity 6 - Create a new button element.  Set its text to "Submit",
   //set its id attribute to "submitButton" (this is for CSS purposes)
 
-  //Activity 7 - Uncomment the three lines of code below to add the onlick function
-  //to the submit button and then add it to the DOM.
+  //Activity 7 - Now, set your button's onlick property to be a function that
+  //calls "displayResult", the function defined below.
+  //If you need help, look at the onclick function defined inside the "intro" function.
+
+
+  //Activity 8 - add the button as a child of the quiz div.
   //When you're finished, you should be able to see your button at the bottom of your webpage.
-  // submitButton.onclick = function(){
-  //   displayResult();
-  // }
-  // quizDiv.appendChild(submitButton);
+
 }
 
 /************************** PART 3 **************************/
@@ -134,7 +135,7 @@ function displayResult(){
   //Activity 3 - create a new div element and set the innerHTML to "Your Result is:".
   //Then, add this new div element as a child of quizDiv
 
-  //Activity 4 - Now, create a new element to display the result variable on the webpage.
+  //Activity 4 - Now, create a new paragraph element to display the result variable on the webpage.
   //set the id attribute of this new element to "quizResult"
   //When youre finished, add it as a child to quizDiv
   //If you have completed this part correctly,
