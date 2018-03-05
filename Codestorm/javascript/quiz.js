@@ -105,7 +105,8 @@ function buildQuiz(){
   submitButton.id = "submitButton";
 
   //Activity 7 - Uncomment the three lines of code below to add the onlick function
-  //
+  //to the submit button and then add it to the DOM.
+  //When you're finished, you should be able to see your button at the bottom of your webpage.
   submitButton.onclick = function(){
     displayResult();
   }
@@ -117,6 +118,8 @@ function buildQuiz(){
 //This function processes the user's quiz answers and creates a productivity score.
 //Based on the productivity score, a message is displayed to the user
 function displayResult(){
+  //We've filled in this part of the code for you.
+  //It calculates the user's score based on the buttons they selected during the quiz.
   var quizDiv = document.getElementById("quizbox");
   var answerContainers = document.getElementsByClassName("answers"); //get all the elements with the class name "answers"
   var productivityPoints = 0;
@@ -128,7 +131,7 @@ function displayResult(){
   var result;
   //Now that we've calculated the user's productivity points, we need to display
   //an appropriate message to the user.
-  //Activity - use conditionals to determine which result you should display to the user.
+  //Activity 1 - use conditionals to determine which result you should display to the user.
   //The four possible results are:
   //"Least productive" for 4 points or under
   //"You're Struggling" for 5 - 8 points
@@ -144,20 +147,21 @@ function displayResult(){
     result = "Productivity QUEEN";
   }
 
-  //Activity - call the clearDiv method with quizDiv as the parameter.
+  //Activity 2 - call the clearDiv method with quizDiv as the parameter.
   //This clears the webpage so that we can add new content to it.
   clearDiv(quizDiv);
 
-  //Activity - create a new div element and set the innerHTML to "Your Result is:"
+  //Activity 3 - create a new div element and set the innerHTML to "Your Result is:".
+  //Then, add this new div element as a child of quizDiv
   var headerDiv = document.createElement("h3");
   headerDiv.innerHTML = "Your Result is:";
-
-  //Activity - add this new div element as a child of quizDiv
   quizDiv.appendChild(headerDiv);
 
-  //Activity - Now, create a new element to display the result variable on the webpage.
-  //set the id attirbute of this new element to "quizResult"
+  //Activity 4 - Now, create a new element to display the result variable on the webpage.
+  //set the id attribute of this new element to "quizResult"
   //When youre finished, add it as a child to quizDiv
+  //If you have completed this part correctly,
+  //you should see the result in yellow when you submit the quiz.
   var resultNode = document.createTextNode(result);
   var node = document.createElement("p");
   node.appendChild(resultNode);
@@ -166,6 +170,8 @@ function displayResult(){
 }
 
 //PROVIDED CODE
+//We have written this function for you to use.  It takes a DOM element as a parameter
+//and deletes all of its children.
 function clearDiv(answersDiv){
   var numChildren = answersDiv.childNodes.length;
 

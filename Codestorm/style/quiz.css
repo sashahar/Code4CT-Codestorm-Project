@@ -2,6 +2,10 @@
   background-color: : #eaece5;
 }
 
+h3{
+  font-family: "Verdana";
+}
+
 .container{
   background-color:  #efefef;
   width: 75%;
@@ -18,6 +22,7 @@
   width: 50%;
   /* height: 60%; */
   background-color: #f18973;
+  border-radius: 8px;
 }
 
 #quizResult {
