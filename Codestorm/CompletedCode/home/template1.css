@@ -1,11 +1,16 @@
 
-.container{
+.grid-container{
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 5px;
   background-color:  #efefef;
   width: 75%;
   margin: auto;
   margin-top: 100px;
-  text-align: center;
+  justify-content: center;
 }
+
+.grid-item
 
 .button {
   margin: 25px;
@@ -23,4 +28,15 @@
   color: #484f4f;
   padding-top: 15px;
   font-family: "Verdana";
+  font-size: 40px;
+}
+
+.text {
+  color: #484f4f;
+  font-family: "Verdana";
+  width: 50%;
+}
+
+.image {
+  width: 60%;
 }
