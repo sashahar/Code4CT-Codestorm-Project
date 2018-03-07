@@ -13,7 +13,6 @@
 
  .grid-item{
    background: white;
-   align-content: center;
    justify-content: center;
 }
 .bottomBar{
@@ -27,44 +26,24 @@ body{
 
 .button {
   margin: 20px;
-  padding: 15px;
-  min-width: 40px;
-  background-color: #f18973;
-  border-color: #f18973;
-  color: white;
-  border-radius: 8px;
-  width: 50%;
-  font: 16px "Verdana";
 }
 
 
 .title {
-  color: #484f4f;
-  padding-top: 15px;
-  font-family: "Verdana";
-  font-size: 40px;
   text-align: center;
 }
 
 h3{
-  color: #484f4f;
-  font-family: "Verdana";
   text-align: center;
   font-size: 28px;
+  margin: 10px;
 }
 
 .text {
-  color: #484f4f;
-  font-family: "Verdana";
   width: 80%;
   padding: 10px;
 }
 
 .image{
   width: 100%;
-}
-
-.smallimg{
-  width: 35%;
-  padding: 10px;
 }

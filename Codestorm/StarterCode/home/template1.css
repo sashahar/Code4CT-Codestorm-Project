@@ -2,7 +2,7 @@
 .grid-container{
   display: grid;
   grid-template-columns: auto;
-  grid-gap: 5px;
+  grid-gap: 10px;
   background-color:  #efefef;
   width: 85%;
   margin: auto;
@@ -16,26 +16,16 @@
 }
 
 .button {
-  margin: 25px;
-  padding: 20px;
-  min-width: 40px;
-  background-color: #f18973;
-  border-color: #f18973;
-  color: white;
-  border-radius: 8px;
+  margin: 10px;
   width: 60%;
-  font: 20px "Verdana";
 }
 
 .title {
-  color: #484f4f;
   padding-top: 15px;
-  font-family: "Verdana";
-  font-size: 40px;
 }
 
 .text {
   color: #484f4f;
-  font-family: "Verdana";
   width: 60%;
+  text-align: left;
 }
