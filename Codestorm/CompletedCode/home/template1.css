@@ -10,7 +10,10 @@
   justify-content: center;
 }
 
-.grid-item
+.image {
+  margin: auto;
+  width: 60%;
+}
 
 .button {
   margin: 25px;
@@ -20,7 +23,7 @@
   border-color: #f18973;
   color: white;
   border-radius: 8px;
-  width: 50%;
+  width: 60%;
   font: 20px "Verdana";
 }
 
@@ -34,9 +37,5 @@
 .text {
   color: #484f4f;
   font-family: "Verdana";
-  width: 50%;
-}
-
-.image {
   width: 60%;
 }
