@@ -1,5 +1,7 @@
 
+
 .grid-container{
+  width: 80%;
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 20px;
@@ -13,7 +15,7 @@
    align-content: center;
    justify-content: center;
 }
-.topBar{
+.bottomBar{
   grid-column: 1 / 3;
 }
 
@@ -62,6 +64,6 @@ h3{
 }
 
 .smallimg{
-  width: 50%;
+  width: 35%;
   padding: 10px;
 }
