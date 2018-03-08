@@ -1,35 +1,139 @@
-.container{
-  background-color:  #efefef;
-  width: 75%;
-  min-height: 75%;
-  margin: auto;
-  margin-top: 50px;
-  text-align: center;
-  display: flex;
-  align-items: center;
+/*--------body--------*/
+body {
+    font-family: 'century gothic';
+    margin: 0px;
+    background-repeat: repeat-y;
+    background-size: 100%;
+    background-image: url('Gym-Wallpaper-007.jpg');
+    background-size: cover;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 200px 200px;
-  grid-template-areas: 'myArea myArea';
-  grid-gap: 25px;
-  padding: 10px;
-  justify-content: center;
-  min-width: 90%;
-  margin-top: 10px;
+
+/*----------------Structuring Grid--------------*/
+    .grid-container {
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+        justify-content: center;
+        padding: 10px;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+    .grid-container > div  {
+
+        padding: 0px;
+        font-size: 30px;
+        text-align: center;
+        color: white;
+        border: 0px solid transparent;
+        margin: 0px;
+    }
+    .grid-item-8 {
+        grid-area: 2 / 1 / 2 / 4;
+        background-color: rgba(50, 50, 50, 0.8);
+        margin: 0;
+        padding: 0;
+    }
+
+    .grid-item-9 {
+        grid-area: 2 / 4 / 2 / 8;
+        background-color: rgba(50, 50, 50, 0.8);
+        margin: 0;
+        padding: 0;
+    }
+
+    .grid-item-1, .grid-item-2, .grid-item-3, .grid-item-4, .grid-item-5, .grid-item-6, .grid-item-7 {
+        background-color: rgba(100, 100, 100, 0.8);
+    }
+/*-------------Styling for block 8---------------*/
+    body {
+        font-family: 'century gothic';
+    }
+    .grid-item-8 > h5{
+        text-align: left;
+        font-size: 16px;
+    }
+
+    .grid-item-8 > p{
+        text-align: left;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+/*-------------Styling for block 8---------------*/
+
+    .grid-item-9 > h5{
+        text-align: left;
+        font-size: 16px;
+      }
+
+    .grid-item-9 > p{
+        text-align: left;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+/*-----------Form Styling-----------------------*/
+input, select {
+    width: auto;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=text] {
+    width: 100px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+label {
+    font-size: 12px;
+}
+td {
+    text-align: left;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: /*rgb(76, 139, 175)*/ rgba(70, 214, 51, 0.89);
+    color: white;
+    padding: 14px 20px;
+    margin: 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.5);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
+input[type=submit]:hover {
+    background-color: rgba(50, 146, 38, 0.89);
+}
+/*-----------Navigation Styling-----------*/
+.topHead {
+    height: auto;
+    overflow: hidden;
+    background-color: rgba(70, 214, 51, 0.89);
 }
 
-.title{
-  color: #484f4f;
-  padding-top: 15px;
-  font-family: "Verdana";
+.topHead h1 {
+  color: #ffffff;
   text-align: center;
+  padding: 2px 4px;
+  text-decoration: none;
+  font-size: 36px;
+}
+h4 {
+    height: 50px;
+    padding-top: 15px;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(184, 184, 184, 0.89);
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    text-decoration: none;
+    font-size: 30px;
 }
