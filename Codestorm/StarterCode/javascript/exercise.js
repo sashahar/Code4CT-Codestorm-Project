@@ -135,21 +135,22 @@ function goalsForTheDay(selectedDay){
 
 //These if states checks if all the each checkbox is checked for each day
             if(checkbox1.checked === true && checkbox2.checked === true && checkbox3.checked === true && selectedDay === 'monday'){
-//Activity 16.1 - If all the checkboxes are checked then the background color of the box for that day in the HTML DOM should change to green
+//Activity 16.1 - If all the checkboxes are ticked then the background color of the box for that day in the HTML DOM should change to green.
 //Use setAttribute() to change the background colour to green. Additionally change the text color to white and eliminate the border.
 
             } else if(selectedDay === 'monday'){
-//Activity 16.2 - If all the checkboxes are not checked then the background color of the box for that day in the HTML DOM should change to red
+//Activity 16.2 - If even one checkbox is not ticked then the background color of the box for that day in the HTML DOM should change to red.
 //Use setAttribute() to change the background colour to red. Additionally change the text color to white and eliminate the border.
 
             }
 //Activity 16.3 - Complete the function by adding in the rest of days of the week.
+//You can use the above else if statement as an example.
 
         }
     }
 
-//Activity 17.1 - Create a function called disableButton that disables the 'GO' button in the HTML DOM after the user clicks it
-//Call the function in the onclick attribute in the exercise.html file
+//Activity 17.1 (OPTIONAL) - Create a function called disableButton that disables the 'GO' button in the HTML DOM after the user clicks it
+//Call the function in the onclick attribute in the exercise.html file.
 //Start your code here.
 
 
