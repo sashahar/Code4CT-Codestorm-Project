@@ -1,42 +1,44 @@
+/* You have been asked to create an exercise app to keep track of your daily exercise goals.
+The app has to give an indication of whether the all the goals for a specific day has been met, for example,
+if all the goals for a specific day is met then the box in the web page that contains that day will turn green, 
+but if any one of goals is not the box that contains that day will turn red.
+*/
+
+/********************** Part 1**********************/
 //Activity 1 - Create 7 Arrays, 1 for each day of the week
 //Name each Array as follows:
 //Array 1 - mondaysGoals; Array 2: tuesdayGoals; Array 3: wednesdayGoals...etc
-//Each Array should contain only 3 properties that will represent the goals for that day
+//Each Array should contain only 3 properties that will represent the goals for that day.
 //You have the freedom to choose any goals you wish.
 //Start coding here
 
-
-//Activity 2 - This function will get the value of the drop value and returns it.
-//Start by creating a function called getDropdownValue. 
-//Inside create a variable called days and set it equal to document.getElementById('days').value;
-//Finally return the value by using the return method.
-//Start writing the function here
-
-
-//Testing is an important part of coding and we want to test and confirm that if the user
-//selects a day in the dropdown that the right value is returned.
-function connectDaysToIcons(){
-    if(getDropdownValue() === "monday"){
-        return 'You chose ' + getDropdownValue();
-    } else if(getDropdownValue() === "tuesday"){
-        return 'You chose ' + getDropdownValue();
-    } 
-//Activity 3 - Complete the function by adding in the rest of days of the week.
-//You can use the above else if statements as an example.
-
-}
-
-//Activity 4 - At the bottom of this page is a function called display.
-//Inside the display function add this line of code - console.log(connectDaysToIcons()); 
-
-//Activity 5 - Create an Array called checkboxId
+//Activity 2 - Create an Array called checkboxId
 //The must contain the following 3 properties:
 //'box_one'
 //'box_two'
 //'box_three'
 //Create the Array below.
 
+//Activity 3 - Create a function that will get the value of the drop value and returns it.
+//Start by creating a function called getDropdownValue. 
+//Inside create a variable called days and set it equal to document.getElementById('days').value;
+//Finally return the value by using the return method.
+//Start writing the function here
 
+
+//Activity 4 - Testing is an important part of coding and we want to test and confirm that if the user
+//selects a day in the dropdown that the right value is returned or that a value is returned at all.
+//Write a function called testDays that prints: "You chose " and the day the user has selected from the dropdown)
+//You can print it in the console.
+
+
+//Activity 5 - At the bottom of this page is a function called display.
+//Inside the display function call the testDays function you've created.
+//The display() function is already called in the exercise.html file
+//The element looks like this <input type="submit" value="GO" id="button" onclick="display();">
+
+
+/********************** Part 2 **********************/
 //This function creates a checkbox as well as a label and line break
 //This function will work as a template for creating the above mentioned elements which means it can be called multiple times
 //Activity 6 - Add dayGoal as a parameter
@@ -77,21 +79,20 @@ function createCheckBox(){
 
 }
 
+/********************** Part 3 **********************/
+
 //This function creates a checkbox for each day based on the user's selection
-//It uses the function above to create the checkbox
+//It uses the createCheckBox function to create the checkbox
 //The function contains a parameter called selectedDay which takes in the user selection
 //based on that day the specific goals for that day will appear in the HTML DOM
+//Activity 13.1 - Inside the for loop of the goalsForTheDay function create an if statement
+//that checks which day the user had selected in the dropdown and then based on that day
+//use the createCheckBox function to create a checkbox that contains the goals for that.
+//Example: if(selectedDay === 'monday') then create a box for that day {createCheckBox(mondayGoals[i]);}
 function goalsForTheDay(selectedDay){
 
     for(i = 0; i < mondayGoals.length; i++){
-        if(selectedDay === 'monday'){
-            createCheckBox(mondayGoals[i]);
-        } else if(selectedDay === 'tuesday'){
-            createCheckBox(tuesdayGoals[i]);
-        }
-//Activity 13.1 - Complete the function by adding in the rest of days of the week.
-//You can use the above else if statement as an example.
- 
+//Start coding here 
 
         }
     }
