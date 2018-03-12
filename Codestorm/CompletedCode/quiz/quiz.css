@@ -58,7 +58,10 @@ button {
   font: 12px "Verdana";
 }
 
-/* TODO: How to align answer options on the left? */
+.thumbnail{
+  width: 15%;
+}
+
 .answers{
   align-items: left;
 }

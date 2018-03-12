@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Exercise Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="style/exercise.css" />  
+    <link rel="stylesheet" type="text/css" media="screen" href="exercise.css" />
 </head>
 <body>
     <div class="topHead">
@@ -21,7 +21,7 @@
         </div>
         <div id="wedIcon" class="grid-item-3">
             <h6>Wed</h6>
-        </div>  
+        </div>
         <div id="thursIcon" class="grid-item-4">
             <h6>Thurs</h6>
         </div>
@@ -30,12 +30,12 @@
         </div>
         <div id="satIcon" class="grid-item-6">
             <h6>Sat</h6>
-        </div>  
+        </div>
         <div id="sunIcon" class="grid-item-7">
             <h6>Sun</h6>
         </div>
         <div id="" class="grid-item-8">
-    
+
             <h4>Select Day</h4>
                 <select id="days" name="days">
                     <option value="monday">Monday</option>
@@ -46,10 +46,10 @@
                     <option value="saturday">Saturday</option>
                     <option value="sunday">Sunday</option>
                 </select>
-                  
+
             </table>
-            <input style="margin-top: 62px;" type="submit" value="GO" id="button" onclick="display();">
-        </div>  
+            <input style="margin-top: 62px;" type="submit" value="GO" id="button" onclick="display(); disableButton();">
+        </div>
         <div class="grid-item-9">
             <h4>Goals</h4>
             <form></form>
@@ -60,6 +60,6 @@
         </div>
     </div>
 
-    <script src="javascript/exercise.js"></script>
+    <script src="exercise.js"></script>
 </body>
 </html>

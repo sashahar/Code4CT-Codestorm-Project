@@ -129,6 +129,8 @@ function displayResult(){
   }
 
   var result;
+  var imgElem = document.createElement("img");
+  imgElem.className = "thumbnail";
   //Now that we've calculated the user's productivity points, we need to display
   //an appropriate message to the user.
   //Activity 1 - use conditionals to determine which result you should display to the user.
@@ -139,12 +141,16 @@ function displayResult(){
   //"Productivity Queen" for 13 points or more
   if (productivityPoints <= 4){
     result = "Least Productive";
+    imgElem.src = "images/skull.png";
   } else if (productivityPoints <= 8){
     result = "You're Struggling";
+    imgElem.src = "images/caution.png";
   } else if (productivityPoints <= 12){
     result = "Productive Pro";
+    imgElem.src = "images/star.png";
   } else {
     result = "Productivity QUEEN";
+    imgElem.src = "images/crown.png";
   }
 
   //Activity 2 - call the clearDiv method with quizDiv as the parameter.
@@ -155,6 +161,7 @@ function displayResult(){
   //Then, add this new div element as a child of quizDiv
   var headerDiv = document.createElement("h3");
   headerDiv.innerHTML = "Your Result is:";
+  quizDiv.appendChild(imgElem);
   quizDiv.appendChild(headerDiv);
 
   //Activity 4 - Now, create a new element to display the result variable on the webpage.
