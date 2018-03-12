@@ -53,17 +53,17 @@ function buildQuiz(){
   clearDiv(quizDiv);
   //The for loop is to iterate through questions array to add questions and answers to HTML DOM
   for(var i = 0; i < questions.length; i++){
-    //Activity 1 - Create a new h3 element for the question text
+    //Activity 5 - Create a new h3 element for the question text
 
-    //Activity 2 - set the h3 element's innerHTML to the current question in the array
+    //Activity 6 - set the h3 element's innerHTML to the current question in the array
     //Hint: questions[i] is the current element in the questions array, and has two properties
     // called "question" and "answers"
 
 
-    //Activity 3 - set the element's "className" attribute to be "question"
+    //Activity 7 - set the element's "className" attribute to be "question"
     //We need to set the className property to be able to style the quesiton text using CSS.
 
-    //Activity 4 - Now that you've filled in the h3 element, add this new element as a child of the quizDiv.
+    //Activity 8 - Now that you've filled in the h3 element, add this new element as a child of the quizDiv.
     //If you've done everything correctly up until this point, you should see all 4 questions
     // appear on the webpage when you click the "Get Started" button
 
@@ -84,21 +84,21 @@ function buildQuiz(){
       answerDiv.appendChild(currAnswer);
       answerDiv.appendChild(document.createElement("br"));
     }
-    //Activity 5 - here, add answerDiv as a child of quizDiv
+    //Activity 9 - here, add answerDiv as a child of quizDiv
     //When you're finished, you should see all of the answer choices pop up on the quiz page.
 
   }
 
   //Next, we will add a button for the user to submit their answers to the quiz.
-  //Activity 6 - Create a new button element.  Set its text to "Submit",
+  //Activity 10 - Create a new button element.  Set its text to "Submit",
   //set its id attribute to "submitButton" (this is for CSS purposes)
 
-  //Activity 7 - Now, set your button's onlick property to be a function that
+  //Activity 11 - Now, set your button's onlick property to be a function that
   //calls "displayResult", the function defined below.
   //If you need help, look at the onclick function defined inside the "intro" function.
 
 
-  //Activity 8 - add the button as a child of the quiz div.
+  //Activity 12 - add the button as a child of the quiz div.
   //When you're finished, you should be able to see your button at the bottom of your webpage.
 
 }
@@ -121,21 +121,21 @@ function displayResult(){
   var result;
   //Now that we've calculated the user's productivity points, we need to display
   //an appropriate message to the user.
-  //Activity 1 - use conditionals to determine which result you should display to the user.
+  //Activity 13 - use conditionals to determine which result you should display to the user.
   //The four possible results are:
   //"Least productive" for 4 points or under
   //"You're Struggling" for 5 - 8 points
   //"Productive Pro" for 9 - 12 points
   //"Productivity Queen" for 13 points or more
 
-  //Activity 2 - call the clearDiv method with quizDiv as the parameter.
+  //Activity 14 - call the clearDiv method with quizDiv as the parameter.
   //This clears the webpage so that we can add new content to it.
 
 
-  //Activity 3 - create a new div element and set the innerHTML to "Your Result is:".
+  //Activity 15 - create a new div element and set the innerHTML to "Your Result is:".
   //Then, add this new div element as a child of quizDiv
 
-  //Activity 4 - Now, create a new paragraph element to display the result variable on the webpage.
+  //Activity 16 - Now, create a new paragraph element to display the result variable on the webpage.
   //set the id attribute of this new element to "quizResult"
   //When youre finished, add it as a child to quizDiv
   //If you have completed this part correctly,
