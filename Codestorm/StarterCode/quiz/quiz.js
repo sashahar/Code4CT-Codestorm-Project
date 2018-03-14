@@ -1,5 +1,4 @@
-
-//An array of quiz questions.  Each element of the array is an object whose properties are a
+//Below is an array called quiz questions. Each element of the array is an object whose properties are a
 //question and the array of possible answers.
 var questions = [{question:"How cluttered is your desk?", answers:["A mess", "Cluttered", "Organized", "Empty"]},
  {question:"On average, how much sleep do you get per night?", answers:["Less than 6 hours", "6-7 hours", "7-8 hours","More than 8 hours"]},
@@ -8,37 +7,51 @@ var questions = [{question:"How cluttered is your desk?", answers:["A mess", "Cl
 
 /************************** PART 1 **************************/
 
-//This function adds dom elements to the webpage to display
+//This function adds DOM elements to the webpage to display
 //an introductory page prompting the user to start the quiz.
 function intro(){
   console.log("Setting up beginning page.");
   var headingDiv = document.getElementById("heading");
   var bodyDiv = document.getElementById("bodyText");
   //Activity 1 - Change the contents of the headingDiv to say "How productive are you?"
+  //using the innerHTML property.
   //You should see this text appear on your webpage.
 
-  //Activity 2 - Add a new child node to the bodyDiv to make a
-  //description of the quiz appear on the screen.
-  //The string you should display is the following: "Take this quiz to see whether you have the habits of highly productive people."
 
-  //Below, we are create a button to help get you started on the next activity
+  //Activity 2.1 -
+  //Create a variable called textNode.
+  //Set the variable equal to a new text node that will be added to
+  //bodyDiv to make a description of the quiz appear on the screen. 
+  //HINT: Use document.createTextNode() to create a new text node.
+  //The string you should display is the following: 
+  //"Take this quiz to see whether you have the habits of highly productive people."
+  
+
+  //Activity 2.2 - Append the textNode to the bodyDiv element (using appendChild()).
+
+
+  //Below, we are created a button to help get you started on the next activity
   var startButton = document.createElement("button");
   startButton.id = "startButton";
-  //Activity 3 - Change the button text to say "Get Started".
+
+  //Activity 3.1 - Create a break <br> element and append the element to bodyDiv.
+
+
+  //Activity 3.2 - Append startButton to bodyDiv.
+
+
+  //Activity 4 - Change the button text to say "Get Started".
+
+  
+  //If you've completed part 1 correctly, you should see your heading ("How productive are you?"),
+  //The description of your quiz, and your "Get Started" button.
+  //When you click the "Get Started" button, you should see a new, blank page appear.
 
   //Here, we define the start button's onclick method that calls the buildQuiz method.
   //We've completed this part for you.
   startButton.onclick = function(){
     buildQuiz();
   }
-
-  //Activity 4 - add your new button as a child of the bodyDiv.
-  //Hint: If you want add your button on a new line, you can add a new
-  //"br" element to the DOM before you add the button
-  //If you've completed part 1 correctly, you should see your heading ("How productive are you?"),
-  //The description of your quiz, and your "Get Started" button.
-  //When you click the "Get Started" button, you should see a new, blank page appear.
-
 }
 
 intro();
@@ -53,19 +66,23 @@ function buildQuiz(){
   clearDiv(quizDiv);
   //The for loop is to iterate through questions array to add questions and answers to HTML DOM
   for(var i = 0; i < questions.length; i++){
-    //Activity 5 - Create a new h3 element for the question text
+    //Activity 5 - Create a variable called questionDiv and 
+    //create a new h3 element that will be used for the question text.
 
-    //Activity 6 - set the h3 element's innerHTML to the current question in the array
+
+    //Activity 6 - Set the h3 element's innerHTML to the current question in the array
     //Hint: questions[i] is the current element in the questions array, and has two properties
     // called "question" and "answers"
 
 
-    //Activity 7 - set the element's "className" attribute to be "question"
-    //We need to set the className property to be able to style the quesiton text using CSS.
+    //Activity 7 - Set the "className" attribute of questionDiv to "question"
+    //We need to set the className property to be able to style the question text using CSS.
+
 
     //Activity 8 - Now that you've filled in the h3 element, add this new element as a child of the quizDiv.
     //If you've done everything correctly up until this point, you should see all 4 questions
-    // appear on the webpage when you click the "Get Started" button
+    //appear on the webpage when you click the "Get Started" button
+
 
     //Next, we will add the four answer options as radio buttons
     //We've taken care of writing this part of the code for you.
@@ -84,23 +101,32 @@ function buildQuiz(){
       answerDiv.appendChild(currAnswer);
       answerDiv.appendChild(document.createElement("br"));
     }
-    //Activity 9 - here, add answerDiv as a child of quizDiv
-    //When you're finished, you should see all of the answer choices pop up on the quiz page.
+    //Activity 9 - Here, add answerDiv as a child of quizDiv.
 
+
+    //When you're finished, you should see all of the answer choices pop up on the quiz page.
   }
 
   //Next, we will add a button for the user to submit their answers to the quiz.
-  //Activity 10 - Create a new button element.  Set its text to "Submit",
-  //set its id attribute to "submitButton" (this is for CSS purposes)
+  //Activity 10.1 - Create a variable called submitButton and set it equal to a new button element. 
 
-  //Activity 11 - Now, set your button's onlick property to be a function that
+
+  //Activity 10.2 - Set its text to "Submit".
+
+
+  //Activity 10.2 - Set its id attribute to "submitButton" (this is for CSS purposes).
+
+
+  //This block of codes set your button's onclick property to be a function that
   //calls "displayResult", the function defined below.
-  //If you need help, look at the onclick function defined inside the "intro" function.
+  submit.onclick = function(){
+    displayResult();
+  }
+
+  //Activity 11 - Add the button as a child of the quiz div.
 
 
-  //Activity 12 - add the button as a child of the quiz div.
   //When you're finished, you should be able to see your button at the bottom of your webpage.
-
 }
 
 /************************** PART 3 **************************/
@@ -119,34 +145,47 @@ function displayResult(){
   }
 
   var result;
-
-  //this if statement makes sure the user answered all the questions.  If they did not,
-  //it set's their productivityPoints back to zero.
-  if(!productivityPoints){
-    productivityPoints = 0;
-  }
   //Now that we've calculated the user's productivity points, we need to display
   //an appropriate message to the user.
-  //Activity 13 - use conditionals to determine which result you should display to the user.
+  //Activity 12 - Use an if statement to determine which result you should display to the user.
   //The four possible results are:
   //"Least productive" for 4 points or under
   //"You're Struggling" for 5 - 8 points
   //"Productive Pro" for 9 - 12 points
   //"Productivity Queen" for 13 points or more
+  
 
-  //Activity 14 - call the clearDiv method with quizDiv as the parameter.
+  
+  //Activity 13 - Call the clearDiv method with quizDiv as the parameter.
   //This clears the webpage so that we can add new content to it.
 
 
-  //Activity 15 - create a new div element and set the innerHTML to "Your Result is:".
-  //Then, add this new div element as a child of quizDiv
+  //Activity 14.1 - Create a new variable called headerDiv and set it equal to a new h3 element.
 
-  //Activity 16 - Now, create a new paragraph element to display the result variable on the webpage.
-  //set the id attribute of this new element to "quizResult"
-  //When youre finished, add it as a child to quizDiv
+
+  //Activity 14.2 - Set the innerHTML property of the headerDiv to "Your Result is:".
+
+
+  //Activity 14.3 - Add headerDiv as a child of quizDiv (using appendChild()).
+
+
+  var resultNode = document.createTextNode(result);
+ 
+  //Activity 15.1 - Now, create a new paragraph element to display the result variable on the webpage.
+  //Name the variable newPara.
+
+
+  //Activity 15.2 - Append resultNode to newPara (using appendChild).
+
+
+  //Activity 15.3 - Set the id attribute of newPara to "quizResult".
+
+
+  //Activity 15.4 - Finally, append newPara to quizDiv.
+
+
   //If you have completed this part correctly,
   //you should see the result in yellow when you submit the quiz.
-
 }
 
 //PROVIDED CODE
