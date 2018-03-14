@@ -123,6 +123,10 @@ function displayResult(){
     productivityPoints += parseInt(userAnswer) + 1;
   }
 
+  if(!productivityPoints){
+    productivityPoints = 0;
+  }
+
   var result;
   var imgElem = document.createElement("img");
   imgElem.className = "thumbnail";

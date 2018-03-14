@@ -119,6 +119,12 @@ function displayResult(){
   }
 
   var result;
+
+  //this if statement makes sure the user answered all the questions.  If they did not,
+  //it set's their productivityPoints back to zero.
+  if(!productivityPoints){
+    productivityPoints = 0;
+  }
   //Now that we've calculated the user's productivity points, we need to display
   //an appropriate message to the user.
   //Activity 13 - use conditionals to determine which result you should display to the user.
